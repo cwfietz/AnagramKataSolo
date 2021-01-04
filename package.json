@@ -1,0 +1,11 @@
+{
+  "name": "anagramkata",
+  "version": "1.0.0",
+  "description": "JavaScript implementation of attempt at Anagram Kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "cwfietz",
+  "license": "ISC"
+}
