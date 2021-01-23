@@ -1,5 +1,8 @@
-const isAnagram = () => {
-    return false;
+const isAnagram = (firstWord, secondWord) => {
+    if (firstWord == null || secondWord == null) {
+        return false;
+    }
+    return firstWord === secondWord;
 }
 
 const getEmptyLetterProfile = () => {

@@ -15,3 +15,19 @@ test('letters profile for kinship is ()', () => {
 test('letters profile for kin ship is ()', () => {
     expect(getLettersProfile('kin ship')).toEqual([0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]);
 });
+
+test('if two words are the same, return true', () => {
+    expect(isAnagram('kinship','kinship')).toBe(true); 
+});
+
+test('if one word is null, return false', () => {
+    expect(isAnagram('kinship',null)).toBe(false); 
+});
+
+test('if both words are null, return false', () => {
+    expect(isAnagram(null,null)).toBe(false); 
+});
+
+test('finds that king and kings are not anagrams', () => {
+    expect(isAnagram('king','kings')).toBe(false); 
+});
