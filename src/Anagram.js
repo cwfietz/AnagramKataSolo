@@ -1,5 +1,5 @@
 const isAnagram = () => {
-    return true;
+    return false;
 }
 
 export { isAnagram };
