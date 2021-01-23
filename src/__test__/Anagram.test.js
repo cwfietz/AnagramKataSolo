@@ -31,3 +31,7 @@ test('if both words are null, return false', () => {
 test('finds that king and kings are not anagrams', () => {
     expect(isAnagram('king','kings')).toBe(false); 
 });
+
+test('finds that kinship and kinshi, words of different length, are not anagrams', () => {
+    expect(isAnagram('kinship','kinshi')).toBe(false); 
+});

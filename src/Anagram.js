@@ -2,6 +2,12 @@ const isAnagram = (firstWord, secondWord) => {
     if (firstWord == null || secondWord == null) {
         return false;
     }
+    if (firstWord === secondWord) {
+        return true;
+    }
+    if (firstWord.length !== secondWord.length) {
+        return false
+    }
     return firstWord === secondWord;
 }
 
