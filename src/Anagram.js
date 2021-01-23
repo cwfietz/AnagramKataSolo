@@ -1,5 +1,5 @@
-const getBlueBerry = () => {
-    return false;
-};
+const isAnagram = () => {
+    return true;
+}
 
-export { getBlueBerry };
+export { isAnagram };

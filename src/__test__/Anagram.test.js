@@ -1,5 +1,5 @@
-import { getBlueBerry } from '../../src/Anagram.js';
+import { isAnagram } from '../../src/Anagram.js';
 
-test('finds that getBlueBerry is true', () => {
-    expect(getBlueBerry()).toBe(true); 
+test('finds that king and kins are not anagrams', () => {
+    expect(isAnagram('king','kins')).toBe(false); 
 });
