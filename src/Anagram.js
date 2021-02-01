@@ -35,9 +35,22 @@ function buildStoreOfLetterProfiles() {
     return storeOfLetterProfiles;
 }
 
+function addToStoreOfLetterProfiles() {
+    let storeOfLetterProfiles = {};
+    let aLetterProfile = getLettersProfile('kinship');
+    storeOfLetterProfiles[aLetterProfile] = ['kinship'];
+
+    let bLetterProfile = getLettersProfile('pinkish');
+    if (sameLetterProfiles(aLetterProfile, bLetterProfile)) {
+        storeOfLetterProfiles[aLetterProfile].push('pinkish');
+    }
+    return storeOfLetterProfiles;
+}
+
 export {
     getEmptyLetterProfile,
     getLettersProfile,
     sameLetterProfiles,
-    buildStoreOfLetterProfiles
+    buildStoreOfLetterProfiles,
+    addToStoreOfLetterProfiles
 };
