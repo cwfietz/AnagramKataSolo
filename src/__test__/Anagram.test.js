@@ -35,3 +35,9 @@ test('attempt to add a letterProfile and a word in an array in an object', () =>
 test('attempt to add multiple words to an array in an object', () => {
     expect(addToStoreOfLetterProfiles()).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": ["kinship","pinkish"]});
 });
+
+test('adding a third word to the store', () => {
+    console.log(getLettersProfile('inlet'));
+    console.log("0, 0, 0, 0, 1, 0, 0, 0,1, 0, 0, 1, 0, 1, 0, 0,0, 0, 0, 1, 0, 0, 0, 0,0, 0".replace(/\s/g,""));
+    expect(addToStoreOfLetterProfiles()).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": ["kinship","pinkish"],"0,0,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0": ["inlet"]});
+});
