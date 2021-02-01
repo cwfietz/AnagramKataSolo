@@ -26,5 +26,6 @@ test('that kinship and pinkish have the same letter profiles', () => {
     expect(sameLetterProfiles(kinshipLetterProfile, pinkishLetterProfile)).toEqual(true);
 });
 
-// Next, how to introduce a third word. Data structure?
-// Can LetterProfiles be used as property names in an object?
+test('attemp to make a letterProfile a field in an object', () => {
+    expect(addWord('kinship')).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": "kinship"});
+});
