@@ -1,7 +1,8 @@
 import {
     getEmptyLetterProfile,
     getLettersProfile,
-    sameLetterProfiles
+    sameLetterProfiles,
+    buildStoreOfLetterProfiles
 } from '../../src/Anagram.js';
 
 test('returns empty letterProfile', () => {
@@ -26,6 +27,6 @@ test('that kinship and pinkish have the same letter profiles', () => {
     expect(sameLetterProfiles(kinshipLetterProfile, pinkishLetterProfile)).toEqual(true);
 });
 
-test('attemp to make a letterProfile a field in an object', () => {
-    expect(addWord('kinship')).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": "kinship"});
+test('attempt to add a letterProfile and a word in an array in an object', () => {
+    expect(buildStoreOfLetterProfiles()).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": ["kinship"]});
 });

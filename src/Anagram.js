@@ -28,8 +28,16 @@ function sameLetterProfiles(firstLetterProfile, secondLetterProfile) {
     return true;
 }
 
+function buildStoreOfLetterProfiles() {
+    let storeOfLetterProfiles = {};
+    const aLetterProfile = getLettersProfile('kinship');
+    storeOfLetterProfiles[aLetterProfile] = ['kinship'];
+    return storeOfLetterProfiles;
+}
+
 export {
     getEmptyLetterProfile,
     getLettersProfile,
-    sameLetterProfiles
+    sameLetterProfiles,
+    buildStoreOfLetterProfiles
 };
