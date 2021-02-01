@@ -1,18 +1,3 @@
-const isAnagram = (firstWord, secondWord) => {
-    if (firstWord == null || secondWord == null) {
-        return false;
-    }
-    if (firstWord === secondWord) {
-        return true;
-    }
-    if (firstWord.length !== secondWord.length) {
-        return false
-    }
-    const firstWordLetterProfile = getLettersProfile(firstWord);
-    const secondWordLetterProfile = getLettersProfile(secondWord);
-    return sameLetterProfiles(firstWordLetterProfile, secondWordLetterProfile);
-}
-
 const getEmptyLetterProfile = () => {
     const templateEmptyProfile = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     return [...templateEmptyProfile];
@@ -43,4 +28,8 @@ function sameLetterProfiles(firstLetterProfile, secondLetterProfile) {
     return true;
 }
 
-export { isAnagram, getEmptyLetterProfile, getLettersProfile };
+export {
+    getEmptyLetterProfile,
+    getLettersProfile,
+    sameLetterProfiles
+};
