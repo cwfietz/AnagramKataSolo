@@ -3,7 +3,9 @@ import {
     getLettersProfile,
     sameLetterProfiles,
     buildStoreOfLetterProfiles,
-    addToStoreOfLetterProfiles
+    addToStoreOfLetterProfiles,
+    addToNonAnagramWordsToStoreOfLetterProfiles,
+    addThirdWordToStoreOfLetterProfiles
 } from '../../src/Anagram.js';
 
 test('returns empty letterProfile', () => {
@@ -36,8 +38,24 @@ test('attempt to add multiple words to an array in an object', () => {
     expect(addToStoreOfLetterProfiles()).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": ["kinship","pinkish"]});
 });
 
-test('adding a third word to the store', () => {
-    console.log(getLettersProfile('inlet'));
-    console.log("0, 0, 0, 0, 1, 0, 0, 0,1, 0, 0, 1, 0, 1, 0, 0,0, 0, 0, 1, 0, 0, 0, 0,0, 0".replace(/\s/g,""));
-    expect(addToStoreOfLetterProfiles()).toEqual({"0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0": ["kinship","pinkish"],"0,0,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0": ["inlet"]});
+test('adding two non-anagram words to the store', () => {
+    // console.log(getLettersProfile('inlets'));
+    // console.log("0, 0, 0, 0, 1, 0, 0, 0,1, 0, 0, 1, 0, 1, 0, 0,0, 0, 1, 1, 0, 0, 0, 0,0, 0".replace(/\s/g,""));
+    // console.log(addToNonAnagramWordsToStoreOfLetterProfiles());
+    expect(addToNonAnagramWordsToStoreOfLetterProfiles()).toEqual(
+        {
+           '0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0': ['kinship'],
+           '0,0,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0': ['inlets']
+        }
+        );
+});
+
+test('adding third word to the store', () => {
+    console.log(addThirdWordToStoreOfLetterProfiles());
+    expect(addThirdWordToStoreOfLetterProfiles()).toEqual(
+        {
+           '0,0,0,0,0,0,0,1,2,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0': ['kinship','pinkish'],
+           '0,0,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0': ['inlets']
+        }
+        );
 });

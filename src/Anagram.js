@@ -47,10 +47,37 @@ function addToStoreOfLetterProfiles() {
     return storeOfLetterProfiles;
 }
 
+function addToNonAnagramWordsToStoreOfLetterProfiles() {
+    let storeOfLetterProfiles = {};
+    
+    let aLetterProfile = getLettersProfile('kinship');
+    let bLetterProfile = getLettersProfile('inlets');
+
+    storeOfLetterProfiles[aLetterProfile] = ['kinship'];
+    storeOfLetterProfiles[bLetterProfile] = ['inlets'];
+
+    return storeOfLetterProfiles;
+}
+
+
+function addThirdWordToStoreOfLetterProfiles() {
+    let storeOfLetterProfiles = {};
+    
+    let aLetterProfile = getLettersProfile('kinship');
+    let bLetterProfile = getLettersProfile('inlets');
+
+    storeOfLetterProfiles[aLetterProfile] = ['kinship'];
+    storeOfLetterProfiles[bLetterProfile] = ['inlets'];
+
+    return storeOfLetterProfiles;
+}
+
 export {
     getEmptyLetterProfile,
     getLettersProfile,
     sameLetterProfiles,
     buildStoreOfLetterProfiles,
-    addToStoreOfLetterProfiles
+    addToStoreOfLetterProfiles,
+    addToNonAnagramWordsToStoreOfLetterProfiles,
+    addThirdWordToStoreOfLetterProfiles
 };
