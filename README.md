@@ -1,2 +1,2 @@
-# AnagramKata
-Source repository for An Anagram Kata
+# AnagramKataSolo
+My attempt at the Anagram Kata
